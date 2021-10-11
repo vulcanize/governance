@@ -8,6 +8,35 @@ Eden Network is a series of Ethereum smart contracts governed by EDEN token hold
 The initial set of smart contracts form the base for controlling product decisions and configurations for the broader Eden product.
 
 
+# Instructions
+
+## Local Deployment
+
+1. Create .env
+   ```bash
+   cp .env.sample .env
+   ```
+
+2. Update values in [.env](./.env)
+   ```
+   export HARDHAT_NETWORK="localhost"
+   export ADMIN_ADDRESS="0xDC7d7A8920C8Eecc098da5B7522a5F31509b5Bfc"
+   export DISTRIBUTOR_UPDATE_THRESHOLD="1"
+   ```
+   Use desired account address for `ADMIN_ADDRESS`.
+
+3. Run the geth node using `--rpc.allow-unprotected-txs` for deploying EdenNetworkProxy.
+
+   https://ethereum.stackexchange.com/a/106773/75673
+
+4. Deploy the contracts.
+   ```bash
+   . ./.env
+
+   yarn deploy
+   ```
+
+
 # Smart Contracts
 
 The initial set of smart contracts deployed for Eden Network:
