@@ -33,7 +33,7 @@ The initial set of smart contracts form the base for controlling product decisio
    ```bash
    . ./.env
 
-   yarn deploy
+   yarn deploy:reset
    ```
 
 
